@@ -35,7 +35,7 @@ def run():
             for response in stub.SayHello(helloworld_pb2.HelloRequest(name='Larkin')):
                 total_length += len(response.message)
                 print("real-time character count: " + str(total_length))
-                print("Greeter client received: " + response.message)
+                print("Greeter client received: " + response.message, flush = True)
                 time.sleep(random.randint(1,3))
 
 
